@@ -24,7 +24,7 @@ class Public extends Component {
 }
 
 newsArticles = query => {
-  API.news()
+  API.getAllOutlets()
     .then(res => {
      console.log(res.data.articles, "res did this work");
      this.setState({ articles: res.data.articles })

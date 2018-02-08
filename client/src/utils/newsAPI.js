@@ -18,5 +18,9 @@ export default {
   },
   newsTopics: function() {
     return axios.get(newsTopics);
+  },
+   // Gets all outlets
+   getAllOutlets: function() {
+    return axios.get("/api/outlets/getoutlets");
   }
 };

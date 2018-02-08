@@ -1,20 +1,18 @@
 const router = require("express").Router();
-const outletsController = require("../../controllers/outletsController");
-const db = require("../../models");
+const topicsController = require("../../controllers/topicsController");
+const request = require('request');
 
-// Matches with "/api/outlets"
+// Matches with "/api/books"
 router.route("/")
-  .get(outletsController.findAll)
-  .post(outletsController.create);
-  
-  router.route("/getoutlets")
-  .get(outletsController.findOutlets)
-// Matches with "/api/outlets/:id"
+  .get(topicsController.findAll)
+  .post(topicsController.create);
+
+// Matches with "/api/books/:id"
 router
   .route("/:id")
-  .get(outletsController.findById)
-  .put(outletsController.update)
-  .delete(outletsController.remove);
+  .get(topicsController.findById)
+  .put(topicsController.update)
+  .delete(topicsController.remove);
 
 // router.post("/saveoutlets", function(req, res) {
 //     console.log("here is req.body", req.body);
@@ -24,7 +22,7 @@ router
 //     res.json({name: "test"});
 // })
 
-// router.route("/getoutlets").get( function(req, res) {
+// router.get("/getoutlets", function(req, res) {
 //     console.log("here is req.body", req.body);
 //     var outletNameString = "";
 
@@ -40,9 +38,9 @@ router
 //         request('https://newsapi.org/v2/everything?q=cryptocurrency&domains=' + cleanOutletNameString +'&' +
 //         'apiKey=b20d4f18b29a4098b58c9c3a9a21cbfd', function(err, res, body) {  
 //             console.log(body);
-//             res.json(body);
-//         }); 
-    // })
+//             // res.json(body);
+//         });
+//     })
 // })
 
 module.exports = router;
