@@ -1,4 +1,4 @@
-# urBIT
+<!-- # urBIT
 
 urBIT is a cryptocurrency tracker. With the explosion of cryptocurrencies, keeping track of your digital assets can be difficult. Not all exchanges sell the same coins. And they don't all track the data you want. Enter urBIT. A one-stop-shop to track your cryptocurrencies. 
 
@@ -58,4 +58,4 @@ Scott Shampine
 
 Greg Ladden
 
-Robert Jaynes
+Robert Jaynes -->
