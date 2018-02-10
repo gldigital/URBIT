@@ -1,0 +1,9 @@
+.editButton{
+    font-size: 15px !important;
+    color: gray !important;
+    padding-left: 2px;
+}
+
+.editButton:hover {
+    color: rgb(99, 98, 98) !important;
+}

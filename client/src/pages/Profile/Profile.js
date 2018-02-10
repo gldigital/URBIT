@@ -24,7 +24,7 @@ class Outlets extends Component {
 
   // Loads all outlets  and sets them to this.state.outlets
   loadOutlets = () => {
-    API.getOutlets()
+    API.getOutlets() 
       .then(res =>
         this.setState({ outlets: res.data, name: ""})
       )

@@ -9,6 +9,13 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  findNewsTopics: function(req, res) {
+		db.Topic
+		.find({})
+		.sort({ date: -1 })
+		.then(dbModel => res.json(dbModel))
+		.catch(err => res.status(422).json(err));
+	},
   findById: function(req, res) {
     db.Topic
       .findById(req.params.id)
