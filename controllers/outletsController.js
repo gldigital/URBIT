@@ -11,7 +11,7 @@ module.exports = {
 	},
 	findOutlets: function(req, res) {
 		db.Outlet
-		.find({})
+		.find(req.query)
 		.sort({ date: -1 })
 		.then(dbModel => res.json(dbModel))
 		.catch(err => res.status(422).json(err));

@@ -9,7 +9,7 @@ router.route("/")
 
 // Matches with "/api/topics/gettopics"
 router.route("/gettopics")
-  .get(topicsController.findNewTopics)
+  .get(topicsController.findNewsTopics)
 
 // Matches with "/api/books/:id"
 router
