@@ -21,7 +21,7 @@ class Dashboard extends Component {
   this.newsArticles();
   this.favoriteNewsArticles();
   this.newsTopics();
-  this.cryptoPairs();
+  // this.cryptoPairs();
 }
 
 newsArticles = query => {
@@ -51,55 +51,23 @@ newsTopics = query => {
     .catch(err => console.log(err));
 };
 
-cryptoPairs = query => {
-  cryptoAPI.allPairs()
-    .then(res => {
-     console.log(res.data, "cryptoData did this work");
-     this.setState({ coins: res.data })
-    })
-    .catch(err => console.log(err));
-};
+// cryptoPairs = query => {
+//   cryptoAPI.allPairs()
+//     .then(res => {
+//      console.log(res.data, "cryptoData did this work");
+//      this.setState({ coins: res.data })
+//     })
+//     .catch(err => console.log(err));
+// };
   render() {
     
     return (
     
       <Container fluid >
-         <div className="heroDash"> 
-         <h1 className="text-center" data-aos="fade-down" > Welcome Greg</h1>
-         <p className="text-center" data-aos="fade-up"> How much money have you made today?</p>
-       </div>
-        <Container>
-          <Row>
-            <Col size="md-2 sm-2 xs-2">
-              <p className="text-right"><i class="fas fa-chart-line"></i></p>
-            </Col>
-            <Col size="md-6">
-              <h2>Track Real Time Rates</h2>
-              <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </Col>
-            <Col size="md-4"></Col>
-          </Row>
-          <Row>
-            <Col size="md-2 sm-2 xs-2">
-              <p className="text-right"><i class="far fa-newspaper"></i></p>
-            </Col>
-            <Col size="md-6">
-              <h2>Follow the Latest News</h2>
-              <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </Col>
-            <Col size="md-4"></Col>
-          </Row>
-          <Row>
-            <Col size="md-2 sm-2 xs-2">
-              <p className="text-right"><i class="fas fa-universal-access"></i></p>
-            </Col>
-            <Col size="md-6">
-              <h2>Customize Your News Feed</h2>
-              <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </Col>
-            <Col size="md-4"></Col>
-          </Row>
-        </Container>
+        <div className="heroDash"> 
+          <h1 className="text-center" data-aos="fade-down" > Welcome</h1>
+          <p className="text-center" data-aos="fade-up"> How much money have you made today?</p>
+        </div>
         <Container>
           <Row>
             <br/>
