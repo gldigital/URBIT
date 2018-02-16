@@ -21,7 +21,7 @@ class Public extends Component {
   this.newsArticles();
   this.favoriteNewsArticles();
   this.newsTopics();
-  this.cryptoPairs();
+  // this.cryptoPairs();
 }
 
 newsArticles = query => {
@@ -82,14 +82,14 @@ newsTopics = query => {
   })
 };
 
-cryptoPairs = query => {
-  cryptoAPI.allPairs()
-    .then(response => {
-     console.log(response.data, "cryptoData did this work");
-     this.setState({ coins: response.data })
-    })
-    .catch(err => console.log(err));
-};
+// cryptoPairs = query => {
+//   cryptoAPI.allPairs()
+//     .then(response => {
+//      console.log(response.data, "cryptoData did this work");
+//      this.setState({ coins: response.data })
+//     })
+//     .catch(err => console.log(err));
+// };
   render() {
     
     return (
